@@ -12,8 +12,9 @@
 
 __all__ = ('HOMEPATH', 'PLATFORM', '__version__')
 
-import os
-import sys
+import os # use os 
+import sys # use sys
+
 
 from . import compat
 from .utils.git import get_repo_revision
