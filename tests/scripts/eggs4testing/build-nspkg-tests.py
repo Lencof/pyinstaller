@@ -13,8 +13,9 @@
 Helper script for generating namespace packages for test-cases.
 """
 
-import os
-import shutil
+import os # use os
+import sys # use sys
+import shutil # use shutil
 
 declare_namespace_template = """
 import pkg_resources
