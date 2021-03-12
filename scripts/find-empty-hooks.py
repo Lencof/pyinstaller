@@ -25,9 +25,10 @@ Proposed usage::
   find PyInstaller/hooks/ -size -2c -print -delete
 
 """
-import glob
-import os
-import sys
+
+import os # use os
+import sys # use sys
+import glob # use glob
 
 # Expand PYTHONPATH with PyInstaller package to support running without
 # installation.
