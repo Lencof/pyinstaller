@@ -18,8 +18,9 @@ Verify that new news entries have valid filenames. Usage:
 
 """
 
-import re
-import sys
+import re # use re
+import os # use os
+import sys # use sys
 from pathlib import Path
 
 CHANGELOG_GUIDE = (
@@ -71,4 +72,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main() # Close
