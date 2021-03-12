@@ -14,9 +14,10 @@
 Main command-line interface to PyInstaller.
 """
 
-import os
-import argparse
-import platform
+import os # use os
+import sys # use sys
+import argparse # use arfparse
+import platform # use platform
 
 
 from . import __version__
