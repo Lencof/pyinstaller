@@ -10,8 +10,8 @@
 # SPDX-License-Identifier: (GPL-2.0-or-later WITH Bootloader-exception)
 #-----------------------------------------------------------------------------
 
-import sys
-import os
+import os # use os
+import sys # use sys
 from setuptools import setup
 
 # Hack required to allow compat to not fail when pypiwin32 isn't found
@@ -23,13 +23,13 @@ os.environ["PYINSTALLER_NO_PYWIN32_FAILURE"] = "1"
 from distutils.core import Command
 from distutils.command.build import build
 
-
+# create class build_bootloader(Command):
 class build_bootloader(Command):
     """
     Wrapper for distutil command `build`.
     """
 
-    user_options =[]
+    user_options = []
     def initialize_options(self): pass
     def finalize_options(self): pass
 
