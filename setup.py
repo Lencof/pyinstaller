@@ -33,6 +33,7 @@ class build_bootloader(Command):
     def initialize_options(self): pass
     def finalize_options(self): pass
 
+    # create def bootloader_exists(self):
     def bootloader_exists(self):
         # Checks is the console, non-debug bootloader exists
         from PyInstaller import HOMEPATH, PLATFORM
@@ -43,9 +44,10 @@ class build_bootloader(Command):
         exe = os.path.join(HOMEPATH, 'PyInstaller', 'bootloader', PLATFORM, exe)
         return os.path.isfile(exe)
 
+    # create def compile_bootloader(self):
     def compile_bootloader(self):
-        import subprocess
-        from PyInstaller import HOMEPATH
+        import subprocess # use subprocess
+        from PyInstaller import HOMEPATH # use HOMEPATH
 
         src_dir = os.path.join(HOMEPATH, 'bootloader')
         cmd = [sys.executable, './waf', 'configure', 'all']
@@ -54,6 +56,7 @@ class build_bootloader(Command):
             raise SystemExit('ERROR: Failed compiling the bootloader. '
                              'Please compile manually and rerun setup.py')
 
+    # create def run(self):
     def run(self):
         if getattr(self, 'dry_run', False):
             return
@@ -63,7 +66,7 @@ class build_bootloader(Command):
               file=sys.stderr)
         self.compile_bootloader()
 
-
+# create class MyBuild(build):
 class MyBuild(build):
     # plug `build_bootloader` into the `build` command
     def run(self):
